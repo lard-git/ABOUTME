@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'Personafont';
+    src: url(assests/chiarostd_b.otf) format('opentype');
+}
+
+* {                          
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;     
+}
+
+body {
+    font-family: Personafont, sans-serif;
+    background: linear-gradient(to bottom, #52fffd, #0201a7);
+    background-attachment: fixed;  
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+.Mainbox {
+    width: 100%;
+    max-width: 1200px;       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;             
+}
+
+.link {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+.first, .second, .fourth, .fifth {
+    display: flex;
+    flex-wrap: wrap;        
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 4vw, 3rem); 
+    width: 100%;
+}
+
+.ichi, .ni, .san {
+    color: azure;
+    flex: 1 1 280px;       
+    text-align: center;
+    line-height: 1.4;
+}
+
+
+.pfp, .back, .yuki {
+    height: auto;
+    width: clamp(120px, 25vw, 200px); 
+    border-radius: 50%;
+    border: 5px solid azure;
+    flex-shrink: 0;
+}
+
+.sakura, .s2, .s3 {
+    height: auto;
+    width: clamp(160px, 30vw, 300px);
+    animation: spin 10s linear infinite;
+}
+
+.s1 {
+    height: auto;
+    width: clamp(160px, 25vw, 250px);
+    transform: rotate(15deg);
+    transition: transform 1s ease;
+}
+.s1:hover {
+    transform: rotate(-15deg) scale(1.2);
+}
+
+.quote {
+    height: auto;
+    width: clamp(200px, 40vw, 300px);
+}
+
+
+.thrid {                  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(2rem, 10vw, 5rem);
+    width: 100%;
+}
+
+
+h2 {
+    color: azure;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 400px) {
+    body { padding: 1rem .5rem; }
+    .ichi, .ni, .san { font-size: 1rem; }
+}
